@@ -1,0 +1,63 @@
+{
+	"name": "@victor-software-house/pi-agent-browser",
+	"version": "0.0.0",
+	"description": "Browser automation tool for Pi via agent-browser CLI",
+	"license": "MIT",
+	"author": "Victor Software House",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/victor-software-house/pi-agent-browser.git"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"keywords": [
+		"pi-package",
+		"pi-extension",
+		"pi-coding-agent",
+		"browser",
+		"automation",
+		"agent-browser"
+	],
+	"type": "module",
+	"pi": {
+		"extensions": [
+			"./extensions"
+		]
+	},
+	"files": [
+		"extensions",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write .",
+		"prepare": "lefthook install"
+	},
+	"peerDependencies": {
+		"@mariozechner/pi-ai": "*",
+		"@mariozechner/pi-coding-agent": "*",
+		"@mariozechner/pi-tui": "*",
+		"@sinclair/typebox": "*"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.9",
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@mariozechner/pi-ai": "^0.63.1",
+		"@mariozechner/pi-coding-agent": "^0.63.1",
+		"@mariozechner/pi-tui": "^0.63.1",
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/github": "12",
+		"@semantic-release/npm": "^13.0.0",
+		"@sinclair/typebox": "^0.34.48",
+		"lefthook": "^1.13.6",
+		"semantic-release": "^25.0.0",
+		"typescript": "^6.0.2"
+	}
+}
